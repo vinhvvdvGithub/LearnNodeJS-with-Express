@@ -12,21 +12,30 @@ app.get('/', function (req, res) {
     });
 });
 
+var users = [
+    { id: 1, name: 'vinh' },
+    { id: 2, name: 'teo' },
+    { id: 3, name: 'meo' }
+];
 
 app.get('/users', function (req, res) {
-    res.render('users/index', {
-        users: [
-            { id: 1, name: 'teo' },
-            { id: 2, name: 'mr teo' }
-        ]
+    res.render('users/user', {
+        users: users
     });
 });
 
 app.get('/users/search', function (req, res) {
-    console.log(req.query);
+    var q = req.query.q;
+    var matchUsers = users.filter(function (user) {
+        return user.name.toLowerCase().indexOf(q.toLowerCase())!==-1;
+    });
+
+    res.render('users/user',  {
+        users: matchUsers
+    });
 });
 
 
-app.listen('port', function() {
+app.listen(port, function demo() {
 
 });
