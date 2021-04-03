@@ -13,6 +13,21 @@ module.exports.create = function (req, res) {
 
 module.exports.postCreate = function (req, res) {
     //   console.log(req.body);
+    var errors = [];
+    if (!req.body.name) {
+        errors.push("Name is required");
+    }
+    if (!req.body.phone) {
+        errors.push("Phone is required");
+    }
+
+    if (errors.length) {
+        res.render('users/create', {
+            errors: errors,
+            values: req.body
+        });
+        return;
+    }
     req.body.id = shortID.generate();
     db.get('users').push(req.body).write();
     res.redirect('/users');
@@ -20,14 +35,16 @@ module.exports.postCreate = function (req, res) {
 
 module.exports.get = function (req, res) {
     var id = req.params.id;
-    //console.log(id);
     var user = db.get('users').find({ id: id }).value();
-    //console.log(user);
-
     res.render('users/view', {
         user: user
     });
 };
+
+module.exports.common = function (req, res) {
+    res.render('Layout/common');
+};
+
 module.exports.search = function (req, res) {
     var q = req.query.q;
     console.log(q);
@@ -36,7 +53,7 @@ module.exports.search = function (req, res) {
         return user.name.toLowerCase().indexOf(q.toLowerCase()) !== -1;
     });
 
-     console.log(matchUsers);
+    console.log(matchUsers);
     // res.render('users/user', {
     //     user: matchUsers
     // });

@@ -12,6 +12,9 @@ route.get('/create', controller.create);
 
 route.post('/create', controller.postCreate);
 
+route.get('/common',controller.common);
+
+
 route.get('/:id', controller.get);
 
 //search method
