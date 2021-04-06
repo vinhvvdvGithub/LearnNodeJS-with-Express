@@ -12,11 +12,14 @@ route.get('/', controller.index);
 
 route.get('/create', controller.create);
 
-route.post('/create',validate.postCreate ,controller.postCreate);
+route.post('/create', validate.postCreate, controller.postCreate);
 
-route.get('/common',controller.common);
+route.get('/common', controller.common);
 
-
+route.get('/cookie', function (req, res, next) {
+    res.cookie('user-id: ', 123456);
+    res.send("hello ");
+});
 route.get('/:id', controller.get);
 
 //search method
