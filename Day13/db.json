@@ -17,8 +17,10 @@
       "id": "0q-73-cwJ"
     },
     {
-      "name": "test 5",
-      "id": "HMRQ0Vf24"
+      "name": "Return King",
+      "id": "HMRQ0Vf24",
+      "email": "kingpower@info.com",
+      "password": "123456"
     },
     {
       "name": "1111111",
@@ -29,31 +31,6 @@
       "name": "test1234",
       "phone": "12312321",
       "id": "VNf_nFy53"
-    },
-    {
-      "name": " ",
-      "phone": " ",
-      "id": "QbgKtY9jH"
-    },
-    {
-      "name": " ",
-      "phone": " ",
-      "id": "6oBstnfpA"
-    },
-    {
-      "name": " ",
-      "phone": " ",
-      "id": "z8n4ytcIs"
-    },
-    {
-      "name": " ",
-      "phone": " ",
-      "id": "61shK74XV"
-    },
-    {
-      "name": " ",
-      "phone": " ",
-      "id": "DXdR3O1ZP"
     }
   ]
 }
