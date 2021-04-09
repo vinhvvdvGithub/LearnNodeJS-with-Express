@@ -18,11 +18,8 @@ app.use(express.urlencoded({ extended: true })) // for parsing application/x-www
 app.use(cookieParser());
 app.use('/users', authMiddleware.requireAuth, useRouter);
 app.use('/auth', authRouter);
-//app.use('/products', product);
+app.use('/products', product);
 app.use(express.static('public'));
-app.get('/products', function (req, res) {
-    res.render("Products/product");
-});
 app.listen(port, function demo() {
 
 });

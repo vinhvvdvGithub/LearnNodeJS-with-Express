@@ -1,6 +1,6 @@
 var db = require('../db');
 
 module.exports.index = function (req, res) {
-    //res.render("Products/product");
-    res.send("hey");
+    res.render("Products/product");
+    
 };
