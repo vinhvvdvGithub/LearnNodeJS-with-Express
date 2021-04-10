@@ -1,11 +1,27 @@
 extends ../layout/common
 block content   
     h1 Products
-        .card(style='width: 18rem;')
-            img.card-img-top(src='...', alt='...')
-            .card-body
-                h5.card-title Card title
-                p.card-text
-                | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
-                a.btn.btn-primary(href='#') Go somewhere
-                
+       each product in products
+            .row 
+                .card.col-6.col-md-4
+                    img.card-img-top(src= product.image, alt='...')
+                    .card-body
+                    h2.card-title= product.name
+                    p.card-text= product.description                      
+                    p.card-text
+                    button.btn.btn-primary(type='button') Buy
+    nav(aria-label='Page navigation example')
+        ul.pagination
+            li.page-item
+            a.page-link(href='#', aria-label='Previous')
+                span(aria-hidden='true') &laquo;
+            li.page-item
+            a.page-link(href='#') 1
+            li.page-item
+            a.page-link(href='#') 2
+            li.page-item
+            a.page-link(href='#') 3
+            li.page-item
+            a.page-link(href='#', aria-label='Next')
+                span(aria-hidden='true') &raquo;
+
