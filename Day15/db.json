@@ -1,0 +1,26 @@
+{
+  "users": [
+    {
+      "name": "anh minh",
+      "id": "xdlnlz-lY"
+    },
+    {
+      "name": "Return King",
+      "id": "HMRQ0Vf24",
+      "email": "kingpower@info.com",
+      "password": "123456"
+    },
+    {
+      "name": "ABC",
+      "id": "HMRQ0Vf25",
+      "email": "abc@info.com",
+      "password": "123456"
+    },
+    {
+      "name": "ted1",
+      "phone": " 12341234",
+      "id": "aXpbAdynF",
+      "avatar": "uploads/77363ac51f791b950edda36b82e4a796"
+    }
+  ]
+}
